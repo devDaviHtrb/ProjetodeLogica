@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Player : MonoBehaviour
 {  
+
     public int vida = 10;
+
     public float speed = 5;
     public float jumpF = 5;
     private bool podepular;
@@ -12,9 +15,8 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
 
+    }
     // Update is called once per frame
     void Update()
     {
@@ -27,26 +29,54 @@ public class Player : MonoBehaviour
     void move(){
         Vector3 movement =  new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
         transform.position += movement *Time.deltaTime*speed;
+        if(Input.GetAxis("Horizontal")> 0){
+            transform.eulerAngles = new Vector3(0f,0f,0f);
+        }else{
+            if(Input.GetAxis("Horizontal")< 0){
+                transform.eulerAngles = new Vector3(0f,180f,0f);
+            }else{
+
+            }
+        }
+
     }
     void jump(){
-        if(Input.GetButtonDown("Jump") && podepular == true){
-           GetComponent<Rigidbody2D>().AddForce( new Vector2(0f, 1f*jumpF), ForceMode2D.Impulse);
-           podepular = false;
+        if(Input.GetButtonDown("Jump")){
+            if(podepular==true){
+                 GetComponent<Rigidbody2D>().AddForce( new Vector2(0f, 1f*jumpF), ForceMode2D.Impulse);
+                if(doublejump==true){
+                    podepular = true;
+                    doublejump = false;
+                }else{
+                    podepular=false;
+                }
+            }
+           
         }
     }
+    void Dano(int dano){
+        vida -= dano;
+        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(2f, 4f), ForceMode2D.Impulse);
 
+    }
     void OnCollisionEnter2D(Collision2D col)
     {
         if(col.gameObject.layer == 8){
             podepular = true;
             doublejump= true;
+            
         }
-    }
-        void OnCollisionExit2D(Collision2D col)
-    {
-        if(doublejump == true){
-            podepular = true;
-            doublejump = false;
+        if(col.gameObject.tag=="Inimigo"){
+            Dano(1);
         }
+
     }
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.tag == "Coletavel"){
+            Controller.Instancia.points++;
+            Debug.Log(Controller.Instancia.points);
+        }
+
+    }
+
 }
