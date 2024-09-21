@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 
@@ -7,9 +8,8 @@ public class Player : MonoBehaviour
 {  
 
     public int vida = 10;
-
     public float speed = 5;
-    public float jumpF = 5;
+    public float jumpF = 10;
     private bool podepular;
     private bool doublejump;
     // Start is called before the first frame update
@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
     }
     void Dano(int dano){
         vida -= dano;
-        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(2f, 4f), ForceMode2D.Impulse);
+        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(3f, 6f), ForceMode2D.Impulse);
 
     }
     void OnCollisionEnter2D(Collision2D col)
@@ -68,13 +68,21 @@ public class Player : MonoBehaviour
         }
         if(col.gameObject.tag=="Inimigo"){
             Dano(1);
+            Controller.Instancia.vida -=1;
+            if(Controller.Instancia.points != 0){
+            Controller.Instancia.points -= 5;
+            Controller.Instancia.UpdateScoreText();
+            }
+           
         }
 
     }
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "Coletavel"){
-            Controller.Instancia.points++;
+            Controller.Instancia.points+=10;
             Debug.Log(Controller.Instancia.points);
+
+            Controller.Instancia.UpdateScoreText();
         }
 
     }
