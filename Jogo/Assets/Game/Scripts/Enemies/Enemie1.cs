@@ -25,7 +25,7 @@ public class Enemie1 : MonoBehaviour
         }else{
             transform.eulerAngles = new Vector3(0f,0f,0f);
         }
-            transform.Translate(Vector2.right*1*Time.deltaTime);
+            transform.Translate(Vector2.right*-1*Time.deltaTime);
             
 
     }

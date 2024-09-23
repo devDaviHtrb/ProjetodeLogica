@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
         if(podepular == true){
             jump();
         }
+        
 
     }
     void move(){
@@ -80,7 +81,6 @@ public class Player : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "Coletavel"){
             Controller.Instancia.points+=10;
-            Debug.Log(Controller.Instancia.points);
 
             Controller.Instancia.UpdateScoreText();
         }
