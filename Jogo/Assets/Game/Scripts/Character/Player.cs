@@ -12,9 +12,12 @@ public class Player : MonoBehaviour
     public float jumpF = 10;
     private bool podepular;
     private bool doublejump;
+     public GameObject tiro;
+
     // Start is called before the first frame update
     void Start()
     {
+     
 
     }
     // Update is called once per frame
@@ -24,7 +27,7 @@ public class Player : MonoBehaviour
         if(podepular == true){
             jump();
         }
-        
+        atirar();
 
     }
     void move(){
@@ -59,6 +62,12 @@ public class Player : MonoBehaviour
         vida -= dano;
         gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(3f, 6f), ForceMode2D.Impulse);
 
+    }
+    void atirar(){
+        if(Input.GetMouseButtonDown(0)){
+            GameObject novoTiro = Instantiate(tiro);
+            novoTiro.transform.position = gameObject.transform.position;
+        }
     }
     void OnCollisionEnter2D(Collision2D col)
     {
