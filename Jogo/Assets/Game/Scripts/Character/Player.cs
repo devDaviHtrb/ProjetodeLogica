@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -12,7 +13,8 @@ public class Player : MonoBehaviour
     public float jumpF = 10;
     private bool podepular;
     private bool doublejump;
-     public GameObject tiro;
+    public bool TemArma;
+    public GameObject tiro;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,9 @@ public class Player : MonoBehaviour
         if(podepular == true){
             jump();
         }
-        atirar();
+        if(TemArma == true){
+            atirar();
+        }
 
     }
     void move(){
@@ -58,8 +62,7 @@ public class Player : MonoBehaviour
            
         }
     }
-    void Dano(int dano){
-        vida -= dano;
+    void Dano(){
         gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(3f, 6f), ForceMode2D.Impulse);
 
     }
@@ -77,7 +80,7 @@ public class Player : MonoBehaviour
             
         }
         if(col.gameObject.tag=="Inimigo"){
-            Dano(1);
+            Dano();
             Controller.Instancia.vida -=1;
             if(Controller.Instancia.points != 0){
             Controller.Instancia.points -= 5;
@@ -85,15 +88,22 @@ public class Player : MonoBehaviour
             }
            
         }
+       
 
     }
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "Coletavel"){
             Controller.Instancia.points+=10;
-
             Controller.Instancia.UpdateScoreText();
+             TemArma = true;
         }
-
+        if(other.gameObject.tag == "Arma"){
+            TemArma = true;
     }
+     if(other.gameObject.tag == "HitKill"){
+            Controller.Instancia.vida = 0;
+        }
+    }
+
 
 }

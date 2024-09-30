@@ -7,6 +7,7 @@ TagManager:
   - Coletavel
   - Inimigo
   - Check
+  - HitKill
   layers:
   - Default
   - TransparentFX
