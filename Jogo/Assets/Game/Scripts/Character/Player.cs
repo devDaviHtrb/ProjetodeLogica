@@ -16,10 +16,12 @@ public class Player : MonoBehaviour
     public bool TemArma;
     public GameObject tiro;
 
+    private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
-     
+     anim = GetComponent<Animator>();
 
     }
     // Update is called once per frame
@@ -39,11 +41,13 @@ public class Player : MonoBehaviour
         transform.position += movement *Time.deltaTime*speed;
         if(Input.GetAxis("Horizontal")> 0){
             transform.eulerAngles = new Vector3(0f,0f,0f);
+            anim.SetBool("Walk", true);
         }else{
             if(Input.GetAxis("Horizontal")< 0){
                 transform.eulerAngles = new Vector3(0f,180f,0f);
+                anim.SetBool("Walk", true);
             }else{
-
+                anim.SetBool("Walk", false);
             }
         }
 
@@ -51,6 +55,7 @@ public class Player : MonoBehaviour
     void jump(){
         if(Input.GetButtonDown("Jump")){
             if(podepular==true){
+                anim.SetBool("Jump", true);
                  GetComponent<Rigidbody2D>().AddForce( new Vector2(0f, 1f*jumpF), ForceMode2D.Impulse);
                 if(doublejump==true){
                     podepular = true;
@@ -77,7 +82,7 @@ public class Player : MonoBehaviour
         if(col.gameObject.layer == 8){
             podepular = true;
             doublejump= true;
-            
+            anim.SetBool("Jump", false);
         }
         if(col.gameObject.tag=="Inimigo"){
             Dano();

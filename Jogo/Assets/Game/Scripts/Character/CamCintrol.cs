@@ -9,7 +9,7 @@ public class CamCintrol : MonoBehaviour
     private Transform target;
     private void LateUpdate()
     {
-        transform.position = new Vector3(target.position.x, target.position.y+3, transform.position.z);
+        transform.position = new Vector3(target.position.x, target.position.y+2, transform.position.z);
     }
 }
 
