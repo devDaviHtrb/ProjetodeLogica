@@ -8,8 +8,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {  
 
-    public float speed = 5;
-    public float jumpF = 6;
+    public float speed = 5f;
+    public float jumpF = 14f;
     private bool podepular;
     private bool doublejump;
     public bool TemArma;
@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
         if(Input.GetButtonDown("Jump")){
             if(podepular==true){
                 anim.SetBool("Jump", true);
-                GetComponent<Rigidbody2D>().velocity = new Vector3(0f, transform.position.y, 0f) + new Vector3(0f,14f, 0f);
+                GetComponent<Rigidbody2D>().velocity = new Vector3(0f, transform.position.y, 0f) + new Vector3(0f, jumpF, 0f);
                 if(doublejump==true){
                     podepular = true;
                     doublejump = false;
