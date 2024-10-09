@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private GameObject tiro;
     public int Vprojetil = 2;
     private Animator anim;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +56,7 @@ public class Player : MonoBehaviour
         if(Input.GetButtonDown("Jump")){
             if(podepular==true){
                 anim.SetBool("Jump", true);
-                 GetComponent<Rigidbody2D>().AddForce( new Vector2(0f, 1f*jumpF), ForceMode2D.Impulse);
+                GetComponent<Rigidbody2D>().velocity = new Vector3(0f, transform.position.y, 0f) + new Vector3(0f,14f, 0f);
                 if(doublejump==true){
                     podepular = true;
                     doublejump = false;
