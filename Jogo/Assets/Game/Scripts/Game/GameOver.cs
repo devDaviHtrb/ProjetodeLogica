@@ -16,6 +16,10 @@ public class GameOver : MonoBehaviour
 
     }
     public void Restore(){
+        PlayerPrefs.SetInt("vida", 4);
+        PlayerPrefs.SetInt("points", 0);
+        Controller.Instancia.vida = PlayerPrefs.GetInt("vida");
+        Controller.Instancia.points = PlayerPrefs.GetInt("points");
         SceneManager.LoadScene("Fase");
     }
     public void menu(){

@@ -17,13 +17,14 @@ public class Controller : MonoBehaviour
     void Start()
     {  
         Instancia = this;
-        points = 0;
-        vida = 4;
+        vida = PlayerPrefs.GetInt("vida");
+        points = PlayerPrefs.GetInt("points");
     }
 
     // Update is called once per frame
     void Update()
     {
+        LoadInfo();
         if(vida ==0){
             GameOver.SetActive(true);
             Destroy(Player);
@@ -34,10 +35,19 @@ public class Controller : MonoBehaviour
     }
     public void Restore(){
         Debug.Log("Funcionou");
+        PlayerPrefs.SetInt("vida", 4);
+        PlayerPrefs.SetInt("points", 0);
+        vida = PlayerPrefs.GetInt("vida");
+        points = PlayerPrefs.GetInt("points");
         SceneManager.LoadScene("SampleTeste");
     }
     public void MudarFase(string fase){
         Debug.Log("Funcionou");
         SceneManager.LoadScene(fase);
+    }
+    public void LoadInfo(){
+        PlayerPrefs.SetInt("points", points);
+        PlayerPrefs.SetInt("vida", vida);
+        Debug.Log(PlayerPrefs.GetInt("vida"));
     }
 }

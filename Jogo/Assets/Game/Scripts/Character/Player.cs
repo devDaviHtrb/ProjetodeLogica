@@ -8,14 +8,14 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {  
 
-    public int vida = 10;
     public float speed = 5;
-    public float jumpF = 10;
+    public float jumpF = 6;
     private bool podepular;
     private bool doublejump;
     public bool TemArma;
-    public GameObject tiro;
-
+    [SerializeField]
+    private GameObject tiro;
+    public int Vprojetil = 2;
     private Animator anim;
 
     // Start is called before the first frame update
@@ -31,9 +31,7 @@ public class Player : MonoBehaviour
         if(podepular == true){
             jump();
         }
-        if(TemArma == true){
-            atirar();
-        }
+        Arma();
 
     }
     void move(){
@@ -67,15 +65,22 @@ public class Player : MonoBehaviour
            
         }
     }
+
     void Dano(){
         gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(3f, 6f), ForceMode2D.Impulse);
 
     }
     void atirar(){
-        if(Input.GetMouseButtonDown(0)){
-            GameObject novoTiro = Instantiate(tiro);
-            novoTiro.transform.position = gameObject.transform.position;
-        }
+            Vector2 direcao = Camera.main.ScreenToWorldPoint(Input.mousePosition) - gameObject.transform.position;
+            GameObject novotiro = Instantiate(tiro, gameObject.transform.position, Quaternion.identity);
+            
+            novotiro.GetComponent<Rigidbody2D>().velocity = direcao*Vprojetil;
+            anim.SetBool("Shot", false);
+    }
+    void Arma(){
+         if(Input.GetMouseButtonDown(0)){
+             anim.SetBool("Shot", true);
+         }
     }
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -101,6 +106,10 @@ public class Player : MonoBehaviour
             Controller.Instancia.points+=10;
             Controller.Instancia.UpdateScoreText();
              TemArma = true;
+             anim.SetBool("TemArma", true);
+        }
+        if(other.gameObject.tag == "ColatevelJava"){
+            Controller.Instancia.vida+=1;
         }
         if(other.gameObject.tag == "Arma"){
             TemArma = true;

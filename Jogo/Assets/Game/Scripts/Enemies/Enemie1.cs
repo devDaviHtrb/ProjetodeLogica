@@ -10,6 +10,7 @@ public class Enemie1 : MonoBehaviour
     public float dir = 1f;
     public float dist;
     public float cont = 0;
+    public bool SeMove;
 
     // Start is called before the first frame update
     void Start()
@@ -20,12 +21,15 @@ public class Enemie1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(dir>0){
+        if(SeMove == true){
+            if(dir>0){
             transform.eulerAngles = new Vector3(0f,180f,0f);
         }else{
             transform.eulerAngles = new Vector3(0f,0f,0f);
         }
             transform.Translate(Vector2.right*-1*Time.deltaTime);
+        }
+        
             
 
     }
