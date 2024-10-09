@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
         }
         Arma();
 
+        Debug.Log("teste");
     }
     void move(){
         Vector3 movement =  new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
@@ -118,6 +119,5 @@ public class Player : MonoBehaviour
             Controller.Instancia.vida = 0;
         }
     }
-
 
 }
