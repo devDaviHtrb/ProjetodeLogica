@@ -15,6 +15,7 @@ TagManager:
   - Rust
   - Arma
   - Tiro
+  - Cabeca
   layers:
   - Default
   - TransparentFX
