@@ -12,10 +12,24 @@ public class Enemie1 : MonoBehaviour
     public float cont = 0;
     public bool SeMove;
 
+    public int vida;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        SeMove = true;
+        if(gameObject.tag == "PHP"){
+            vida = 10;
+        }else{
+            if(gameObject.tag == "Python"){
+                vida = 1;
+            }else{
+                if(gameObject.tag == "Rust"){
+                    SeMove = false;
+                    vida = 2;
+                }
+            }
+        }
     }
 
     // Update is called once per frame
@@ -28,6 +42,9 @@ public class Enemie1 : MonoBehaviour
             transform.eulerAngles = new Vector3(0f,0f,0f);
         }
             transform.Translate(Vector2.right*-1*Time.deltaTime);
+        }
+        if(vida == 0){
+            Destroy(gameObject);
         }
         
             
@@ -43,6 +60,11 @@ public class Enemie1 : MonoBehaviour
             dir *=-1f;
             Debug.Log("Mudando");
         }
+        if(other.gameObject.tag == "Tiro"){
+            vida -=1;
+            Destroy(other);
+        }
     }
+    
 
 }

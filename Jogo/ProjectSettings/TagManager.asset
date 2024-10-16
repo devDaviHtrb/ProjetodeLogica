@@ -9,6 +9,12 @@ TagManager:
   - Check
   - HitKill
   - ColatevelJava
+  - PHP
+  - Python
+  - Cobol
+  - Rust
+  - Arma
+  - Tiro
   layers:
   - Default
   - TransparentFX
@@ -19,8 +25,8 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
+  - Enemie
+  - EnemieShot
   - 
   - 
   - 

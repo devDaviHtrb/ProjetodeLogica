@@ -91,13 +91,18 @@ public class Player : MonoBehaviour
             doublejump= true;
             anim.SetBool("Jump", false);
         }
-        if(col.gameObject.tag=="Inimigo"){
+        if(col.gameObject.tag == "Cabeca"){
+            Dano();
+            Controller.Instancia.vida +=1;
+        }
+        if(col.gameObject.layer == 9 ){
             Dano();
             Controller.Instancia.vida -=1;
             if(Controller.Instancia.points != 0){
             Controller.Instancia.points -= 5;
             Controller.Instancia.UpdateScoreText();
             }
+            
            
         }
        
@@ -107,18 +112,22 @@ public class Player : MonoBehaviour
         if(other.gameObject.tag == "Coletavel"){
             Controller.Instancia.points+=10;
             Controller.Instancia.UpdateScoreText();
-             TemArma = true;
-             anim.SetBool("TemArma", true);
         }
         if(other.gameObject.tag == "ColatevelJava"){
             Controller.Instancia.vida+=1;
         }
         if(other.gameObject.tag == "Arma"){
             TemArma = true;
+            anim.SetBool("TemArma", true);
     }
      if(other.gameObject.tag == "HitKill"){
             Controller.Instancia.vida = 0;
         }
+        if(other.gameObject.layer == 10){
+        Controller.Instancia.vida -=1;
+        Destroy(other.gameObject);
     }
+    }
+    
 
 }

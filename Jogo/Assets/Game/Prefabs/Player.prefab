@@ -195,6 +195,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpF: 7
-  TemArma: 0
-  tiro: {fileID: 0}
+  TemArma: 1
+  tiro: {fileID: 308012577022714418, guid: f2354c858df917843ab9588a134dbbb0, type: 3}
   Vprojetil: 2
