@@ -2216,6 +2216,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 291460938525993879, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1150597437}
     - target: {fileID: 2673052972477018579, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2296,21 +2300,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5060943130997581471, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5621131293568382865, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7425153154719477754, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1150597437}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5621131293568382865, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2119266036}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
 --- !u!1001 &708546595
 PrefabInstance:
@@ -2430,7 +2431,7 @@ GameObject:
   - component: {fileID: 745540298}
   - component: {fileID: 745540297}
   - component: {fileID: 745540296}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: NotGroundJump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49159,7 +49160,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 844378403480091012, guid: 47a2f017f26eb3d4c98104c115ea4f99, type: 3}
       propertyPath: jumpF
-      value: 12
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 844378403480091012, guid: 47a2f017f26eb3d4c98104c115ea4f99, type: 3}
       propertyPath: speed
@@ -49609,6 +49610,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83582cf2f6882d441b8d1888093d362c, type: 3}
+--- !u!114 &1150597437 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 632040782678664354, guid: 0900b858141a8e54184bae42463ffa2f, type: 3}
+  m_PrefabInstance: {fileID: 1562414726}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c6a62af5030faf419906c9bc0e5db0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1229623955 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4979725118820531525, guid: 83582cf2f6882d441b8d1888093d362c, type: 3}
@@ -50495,32 +50507,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e147e66ca1552448606c1717c9f550, type: 3}
---- !u!1 &2119266031 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5621131293568382865, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
-  m_PrefabInstance: {fileID: 678606079}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &2119266036
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119266031}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6332e05de392c8e4da9b7369f36f49ef, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
