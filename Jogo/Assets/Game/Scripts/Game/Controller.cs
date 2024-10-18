@@ -24,7 +24,7 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LoadInfo();
+        alterInfo(vida, points);
         if(vida ==0){
             GameOver.SetActive(true);
             Destroy(Player);
@@ -33,10 +33,12 @@ public class Controller : MonoBehaviour
     public void UpdateScoreText(){
         scoreText.text = points.ToString();
     }
+    public void alterInfo(int vida, int points){
+        PlayerPrefs.SetInt("vida", vida);
+        PlayerPrefs.SetInt("points", points);
+    }
     public void Restore(){
-        Debug.Log("Funcionou");
-        PlayerPrefs.SetInt("vida", 4);
-        PlayerPrefs.SetInt("points", 0);
+        alterInfo(4, 0);
         vida = PlayerPrefs.GetInt("vida");
         points = PlayerPrefs.GetInt("points");
         SceneManager.LoadScene("Fase1");
@@ -44,9 +46,5 @@ public class Controller : MonoBehaviour
     public void MudarFase(string fase){
         SceneManager.LoadScene(fase);
     }
-    public void LoadInfo(){
-        PlayerPrefs.SetInt("points", points);
-        PlayerPrefs.SetInt("vida", vida);
-        Debug.Log(PlayerPrefs.GetInt("vida"));
-    }
+
 }

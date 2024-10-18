@@ -37,9 +37,9 @@ public class Enemie1 : MonoBehaviour
         if(SeMove == true){
             if(dir>0){
             transform.eulerAngles = new Vector3(0f,180f,0f);
-        }else{
-            transform.eulerAngles = new Vector3(0f,0f,0f);
-        }
+            }else{
+                transform.eulerAngles = new Vector3(0f,0f,0f);
+            }
             transform.Translate(Vector2.right*-1*Time.deltaTime);
         }
         if(vida == 0){
@@ -57,13 +57,11 @@ public class Enemie1 : MonoBehaviour
     {
         if(other.gameObject.tag == "Check"){
             dir *=-1f;
-            Debug.Log("Mudando");
+            Debug.Log("Virando");
         }
         if(other.gameObject.tag == "Tiro"){
             vida -=1;
             Destroy(other);
         }
     }
-    
-
 }
