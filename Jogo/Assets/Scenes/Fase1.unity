@@ -49163,7 +49163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 844378403480091012, guid: 47a2f017f26eb3d4c98104c115ea4f99, type: 3}
       propertyPath: speed
-      value: 0.015
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 1540850119957913063, guid: 47a2f017f26eb3d4c98104c115ea4f99, type: 3}
       propertyPath: m_Name
@@ -49899,7 +49899,7 @@ PrefabInstance:
     - target: {fileID: 632040782678664354, guid: 0900b858141a8e54184bae42463ffa2f, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1967307541}
     - target: {fileID: 632040782678664354, guid: 0900b858141a8e54184bae42463ffa2f, type: 3}
       propertyPath: GameOver
       value: 
@@ -50433,6 +50433,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83582cf2f6882d441b8d1888093d362c, type: 3}
+--- !u!1 &1967307541 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1540850119957913063, guid: 47a2f017f26eb3d4c98104c115ea4f99, type: 3}
+  m_PrefabInstance: {fileID: 773311691}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2041297539
 PrefabInstance:
   m_ObjectHideFlags: 0

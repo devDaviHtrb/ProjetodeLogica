@@ -39,10 +39,9 @@ public class Controller : MonoBehaviour
         PlayerPrefs.SetInt("points", 0);
         vida = PlayerPrefs.GetInt("vida");
         points = PlayerPrefs.GetInt("points");
-        SceneManager.LoadScene("SampleTeste");
+        SceneManager.LoadScene("Fase1");
     }
     public void MudarFase(string fase){
-        Debug.Log("Funcionou");
         SceneManager.LoadScene(fase);
     }
     public void LoadInfo(){

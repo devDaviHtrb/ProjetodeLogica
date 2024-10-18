@@ -17,7 +17,7 @@ public class Enemie1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SeMove = true;
+       
         if(gameObject.tag == "PHP"){
             vida = 10;
         }else{
@@ -25,7 +25,6 @@ public class Enemie1 : MonoBehaviour
                 vida = 1;
             }else{
                 if(gameObject.tag == "Rust"){
-                    SeMove = false;
                     vida = 2;
                 }
             }
