@@ -11,12 +11,6 @@ public class ControllerMenu : MonoBehaviour
         PlayerPrefs.SetInt("vida", 4);
         PlayerPrefs.SetInt("points", 0);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void Iniciar(string fase){
         SceneManager.LoadScene(fase);
     }
