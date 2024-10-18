@@ -91,11 +91,7 @@ public class Player : MonoBehaviour
             doublejump= true;
             anim.SetBool("Jump", false);
         }
-        if(col.gameObject.layer == 7){
-            podepular = false;
-            doublejump= false;
-            anim.SetBool("Jump", false);
-        }
+
         if(col.gameObject.tag == "Cabeca"){
             Dano();
             Controller.Instancia.vida +=1;
