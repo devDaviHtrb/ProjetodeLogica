@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
         if(Input.GetButtonDown("Jump")){
             if(podepular==true){
                 anim.SetBool("Jump", true);
-                GetComponent<Rigidbody2D>().velocity = new Vector3(0f, transform.position.y, 0f) + new Vector3(0f, jumpF, 0f);
+                GetComponent<Rigidbody2D>().velocity = new Vector3(0f, jumpF, 0f);
                 if(doublejump==true){
                     podepular = true;
                     doublejump = false;
