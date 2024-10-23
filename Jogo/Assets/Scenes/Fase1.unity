@@ -733,6 +733,74 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4979725118820531525, guid: 83582cf2f6882d441b8d1888093d362c, type: 3}
   m_PrefabInstance: {fileID: 1042056418}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &655731817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 655731820}
+  - component: {fileID: 655731819}
+  - component: {fileID: 655731818}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &655731818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655731817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &655731819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655731817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &655731820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655731817}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &684722708 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4979725118820531525, guid: 83582cf2f6882d441b8d1888093d362c, type: 3}
@@ -1802,6 +1870,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83582cf2f6882d441b8d1888093d362c, type: 3}
+--- !u!114 &1606187550 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 632040782678664354, guid: 0900b858141a8e54184bae42463ffa2f, type: 3}
+  m_PrefabInstance: {fileID: 1439734847}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c6a62af5030faf419906c9bc0e5db0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1611350130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1810,6 +1889,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 291460938525993879, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1606187550}
+    - target: {fileID: 291460938525993879, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restore
+      objectReference: {fileID: 0}
     - target: {fileID: 2673052972477018579, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1911,6 +1998,14 @@ PrefabInstance:
       value: '0000
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425153154719477754, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1606187550}
+    - target: {fileID: 7425153154719477754, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MudarFase
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24183,3 +24278,4 @@ SceneRoots:
   - {fileID: 2083426855}
   - {fileID: 2042318944}
   - {fileID: 1448650627}
+  - {fileID: 655731820}
