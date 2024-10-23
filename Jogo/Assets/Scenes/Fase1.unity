@@ -904,6 +904,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8770749369036171031, guid: 23e147e66ca1552448606c1717c9f550, type: 3}
   m_PrefabInstance: {fileID: 1427231602}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &910478370 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2716458337237806135, guid: 585c31e680d0dc645a520663450ed510, type: 3}
+  m_PrefabInstance: {fileID: 564218425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1042056418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1989,6 +1994,26 @@ PrefabInstance:
       propertyPath: hearts.Array.data[4]
       value: 
       objectReference: {fileID: 21300000, guid: cb77542d67c8732479d051684330a0d8, type: 3}
+    - target: {fileID: 3409547768609595749, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409547768609595749, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409547768609595749, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.41300043
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409547768609595749, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.193
+      objectReference: {fileID: 0}
+    - target: {fileID: 5060943130997581471, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 910478370}
     - target: {fileID: 5621131293568382865, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1998,6 +2023,10 @@ PrefabInstance:
       value: '0000
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346407640418243393, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7425153154719477754, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
