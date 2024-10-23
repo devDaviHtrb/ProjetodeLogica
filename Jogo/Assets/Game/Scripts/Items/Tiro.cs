@@ -8,14 +8,12 @@ using UnityEngine.UIElements;
 public class Tiro : MonoBehaviour
 {
 
-
-
     void OnTriggerEnter2D(Collider2D other)
     {
             
-                   if(other.gameObject.tag != "Player"){
-                        Destroy(gameObject);
-                   }
+        if(other.gameObject.tag != "Player"){
+            Destroy(gameObject);
+        }
 
     }
 
