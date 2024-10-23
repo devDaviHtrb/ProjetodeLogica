@@ -1897,11 +1897,11 @@ PrefabInstance:
     - target: {fileID: 3151569356695734151, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
       propertyPath: hearts.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: 405c28c1181643a41882575afc677d28, type: 3}
+      objectReference: {fileID: 21300000, guid: 123e34a3ae986074b893ca92fa189796, type: 3}
     - target: {fileID: 3151569356695734151, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
       propertyPath: hearts.Array.data[4]
       value: 
-      objectReference: {fileID: 21300000, guid: 405c28c1181643a41882575afc677d28, type: 3}
+      objectReference: {fileID: 21300000, guid: cb77542d67c8732479d051684330a0d8, type: 3}
     - target: {fileID: 5621131293568382865, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
       propertyPath: m_Name
       value: Canvas
