@@ -38,7 +38,7 @@ public class Controller : MonoBehaviour
         PlayerPrefs.SetInt("points", points);
     }
     public void Restore(){
-        alterInfo(4, 0);
+        alterInfo(3, 0);
         vida = PlayerPrefs.GetInt("vida");
         points = PlayerPrefs.GetInt("points");
         SceneManager.LoadScene("Fase1");
