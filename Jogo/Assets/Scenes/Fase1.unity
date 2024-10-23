@@ -1391,6 +1391,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 861318647}
     - target: {fileID: 632040782678664354, guid: 0900b858141a8e54184bae42463ffa2f, type: 3}
+      propertyPath: points
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 632040782678664354, guid: 0900b858141a8e54184bae42463ffa2f, type: 3}
       propertyPath: GameOver
       value: 
       objectReference: {fileID: 312977605}
@@ -1886,9 +1890,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3151569356695734151, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
+      propertyPath: hearts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3151569356695734151, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
+      propertyPath: hearts.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 405c28c1181643a41882575afc677d28, type: 3}
+    - target: {fileID: 3151569356695734151, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
+      propertyPath: hearts.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 405c28c1181643a41882575afc677d28, type: 3}
     - target: {fileID: 5621131293568382865, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346407640418243393, guid: d6fb1ba9b1171f14ca181f73d8925d09, type: 3}
+      propertyPath: m_Text
+      value: '0000
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
