@@ -33,8 +33,6 @@ public class Player : MonoBehaviour
             jump();
         }
         Arma();
-
-        Debug.Log("teste");
     }
     void move(){
         Vector3 movement =  new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
