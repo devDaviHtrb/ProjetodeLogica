@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Timeline;
+using UnityEngine.SceneManagement;
 
 public class MathFase : MonoBehaviour
 {
@@ -18,8 +19,10 @@ public class MathFase : MonoBehaviour
     public void error(){
         Fases[cont].SetActive(false);
         Anim.GetComponent<Animator>().SetBool("Error", true);
+        Destroy(gameObject);
     }
     public void errada(GameObject button){
         Destroy(button);
     }
+
 }
