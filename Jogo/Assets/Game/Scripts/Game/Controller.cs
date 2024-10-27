@@ -11,14 +11,15 @@ public class Controller : MonoBehaviour
     public int points;
     public int vida;
     public Text scoreText;
-
     public GameObject GameOver;
     public GameObject Player;
+
     void Start()
     {  
         Instancia = this;
         vida = PlayerPrefs.GetInt("vida");
         points = PlayerPrefs.GetInt("points");
+
     }
 
     // Update is called once per frame
@@ -46,5 +47,4 @@ public class Controller : MonoBehaviour
     public void MudarFase(string fase){
         SceneManager.LoadScene(fase);
     }
-
 }

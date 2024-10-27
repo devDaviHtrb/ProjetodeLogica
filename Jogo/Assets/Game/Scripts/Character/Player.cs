@@ -17,12 +17,15 @@ public class Player : MonoBehaviour
     private GameObject tiro;
     public int Vprojetil = 2;
     private Animator anim;
+
+    public AudioSource Audio;
     
 
     // Start is called before the first frame update
     void Start()
     {
-     anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
+        Audio =  GetComponent<AudioSource>();
 
     }
     // Update is called once per frame
@@ -114,6 +117,7 @@ public class Player : MonoBehaviour
         }
         if(other.gameObject.tag == "ColatevelJava"){
             Controller.Instancia.vida+=1;
+            Audio.Play();
         }
         if(other.gameObject.tag == "Arma"){
             TemArma = true;
