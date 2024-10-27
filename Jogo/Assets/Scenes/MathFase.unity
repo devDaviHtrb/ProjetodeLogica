@@ -679,6 +679,7 @@ GameObject:
   - component: {fileID: 167222353}
   - component: {fileID: 167222352}
   - component: {fileID: 167222351}
+  - component: {fileID: 167222354}
   m_Layer: 0
   m_Name: Computer1
   m_TagString: Untagged
@@ -768,12 +769,24 @@ Transform:
   m_GameObject: {fileID: 167222350}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00301, y: -0.00402, z: -5.0634513}
-  m_LocalScale: {x: 0.24756362, y: 0.13760166, z: 0.05626057}
+  m_LocalPosition: {x: -0.053500924, y: -0.12522091, z: 0}
+  m_LocalScale: {x: 4.400304, y: 2.445792, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1616918907}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &167222354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167222350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4007a8ac358d63c4ab129c4c1d84e388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &234843790
 GameObject:
   m_ObjectHideFlags: 0
@@ -4479,7 +4492,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 167222353}
   - {fileID: 250285081}
   - {fileID: 1003217604}
   - {fileID: 1313877295}
@@ -4526,7 +4538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.9490196}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.972549}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5471,3 +5483,4 @@ SceneRoots:
   - {fileID: 1402781867}
   - {fileID: 1474855686}
   - {fileID: 36509042}
+  - {fileID: 167222353}
