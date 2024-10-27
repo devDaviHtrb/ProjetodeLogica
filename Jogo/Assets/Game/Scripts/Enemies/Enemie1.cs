@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Callbacks;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -41,8 +42,13 @@ public class Enemie1 : MonoBehaviour
                 transform.eulerAngles = new Vector3(0f,0f,0f);
             }
             transform.Translate(Vector2.right*-1*Time.deltaTime);
+            
         }
         if(vida == 0){
+            
+            if(gameObject.tag == "Cobol"){
+                Controller.Instancia.Cobol = false;
+            }
             Destroy(gameObject);
         }  
 

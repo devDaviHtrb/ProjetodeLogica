@@ -55,6 +55,7 @@ public class Player : MonoBehaviour
     }
     void jump(){
         if(Input.GetButtonDown("Jump")){
+
             if(podepular==true){
                 anim.SetBool("Jump", true);
                 GetComponent<Rigidbody2D>().velocity = new Vector3(0f, jumpF, 0f);

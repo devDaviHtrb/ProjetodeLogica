@@ -13,7 +13,7 @@ public class Controller : MonoBehaviour
     public Text scoreText;
     public GameObject GameOver;
     public GameObject Player;
-
+    public bool Cobol = true;
     void Start()
     {  
         Instancia = this;
@@ -30,6 +30,7 @@ public class Controller : MonoBehaviour
             GameOver.SetActive(true);
             Destroy(Player);
         }
+
     }
     public void UpdateScoreText(){
         scoreText.text = points.ToString();
@@ -45,6 +46,7 @@ public class Controller : MonoBehaviour
         SceneManager.LoadScene("Fase1");
     }
     public void MudarFase(string fase){
+
         SceneManager.LoadScene(fase);
     }
 }
