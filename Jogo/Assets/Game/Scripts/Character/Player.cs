@@ -8,7 +8,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {  
 
-    public float speed = 5f;
+    public float speed;
     public float jumpF = 14f;
     private bool podepular;
     private bool doublejump;
