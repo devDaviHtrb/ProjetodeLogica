@@ -9,9 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 556a82c70f9772b45bbbf7465c071838
   - enabled: 1
+    path: Assets/Scenes/MathFase.unity
+    guid: b37dad6aca0c7b54bb9a7de7450144df
+  - enabled: 1
     path: Assets/Scenes/Fase1.unity
     guid: 803410664c1a7ac488048f08c9f68dff
   - enabled: 1
     path: Assets/Scenes/Fase2.unity
-    guid: 5a56d223e94adff49935961499a7d14b
+    guid: 680c7b53412c942499752ac9acbb4339
+  - enabled: 1
+    path: Assets/Scenes/Fase3.unity
+    guid: 4bec28c966cecba419852073b03f463d
+  - enabled: 1
+    path: Assets/Scenes/Fase4.unity
+    guid: 748797aded2eae14eb9b8563ba97e74f
   m_configObjects: {}
