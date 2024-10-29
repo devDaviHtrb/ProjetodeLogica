@@ -19,6 +19,9 @@ public class Controller : MonoBehaviour
         Instancia = this;
         vida = PlayerPrefs.GetInt("vida");
         points = PlayerPrefs.GetInt("points");
+        if(SceneManager.GetActiveScene().name == "Fase1" ||SceneManager.GetActiveScene().name == "Fase2"||SceneManager.GetActiveScene().name == "Menu"||SceneManager.GetActiveScene().name == "MathFase"){
+            PlayerPrefs.SetInt("Arma", 0);
+        }
 
     }
 

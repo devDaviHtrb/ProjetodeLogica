@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class DownPlat : MonoBehaviour
 {
@@ -22,7 +23,9 @@ public class DownPlat : MonoBehaviour
     IEnumerator Cair(){
         yield return new WaitForSeconds(1);
         gameObject.AddComponent<Rigidbody2D>();
-        Destroy(gameObject.GetComponent<BoxCollider2D>());
+        Destroy(gameObject.GetComponent<TilemapCollider2D>());
+        yield return new WaitForSeconds(4);
+        Destroy(gameObject);
     }
   
     void OnCollisionEnter2D(Collision2D other)

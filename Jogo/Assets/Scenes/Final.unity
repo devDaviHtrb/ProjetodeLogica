@@ -40512,7 +40512,7 @@ PrefabInstance:
     - target: {fileID: 844378403480091012, guid: 47a2f017f26eb3d4c98104c115ea4f99, type: 3}
       propertyPath: tiro
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2052203587}
     - target: {fileID: 844378403480091012, guid: 47a2f017f26eb3d4c98104c115ea4f99, type: 3}
       propertyPath: jumpF
       value: 10

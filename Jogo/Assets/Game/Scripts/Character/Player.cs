@@ -35,6 +35,10 @@ public class Player : MonoBehaviour
         if(podepular == true){
             jump();
         }
+        if(PlayerPrefs.GetInt("Arma")==1){
+            anim.SetBool("TemArma", true);
+        }
+
         Arma();
     }
     void move(){
@@ -122,7 +126,8 @@ public class Player : MonoBehaviour
         }
         if(other.gameObject.tag == "Arma"){
             TemArma = true;
-            anim.SetBool("TemArma", true);
+            PlayerPrefs.SetInt("Arma", 1);
+            
     }
      if(other.gameObject.tag == "HitKill"){
             Controller.Instancia.vida = 0;

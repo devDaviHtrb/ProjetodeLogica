@@ -10,6 +10,7 @@ public class ControllerMenu : MonoBehaviour
     {
         PlayerPrefs.SetInt("vida", 3);
         PlayerPrefs.SetInt("points", 0);
+        PlayerPrefs.SetInt("Arma", 0);
     }
     public void Iniciar(string fase){
         SceneManager.LoadScene(fase);
