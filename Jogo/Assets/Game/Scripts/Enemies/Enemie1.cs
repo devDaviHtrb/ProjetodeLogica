@@ -20,7 +20,7 @@ public class Enemie1 : MonoBehaviour
     {
        
         if(gameObject.tag == "PHP"){
-            vida = 10;
+            vida = 5;
         }else{
             if(gameObject.tag == "Python"){
                 vida = 1;
