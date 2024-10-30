@@ -24,7 +24,7 @@ public class DownPlat : MonoBehaviour
         yield return new WaitForSeconds(1);
         gameObject.AddComponent<Rigidbody2D>();
         Destroy(gameObject.GetComponent<TilemapCollider2D>());
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(2);
         Destroy(gameObject);
     }
   
