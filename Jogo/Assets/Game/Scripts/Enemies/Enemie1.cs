@@ -28,6 +28,12 @@ public class Enemie1 : MonoBehaviour
                 if(gameObject.tag == "Rust"){
                     vida = 2;
                 }
+                else
+                {
+                    if(gameObject.tag == "Cobol"){
+                        vida = 25;
+                    }
+                }
             }
         }
     }
