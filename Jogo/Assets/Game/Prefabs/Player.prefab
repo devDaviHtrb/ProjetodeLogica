@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c544131cb35d6d4da91d707b39ef3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.04
+  speed: 0.1
   jumpF: 10
   TemArma: 1
   tiro: {fileID: 308012577022714418, guid: f2354c858df917843ab9588a134dbbb0, type: 3}

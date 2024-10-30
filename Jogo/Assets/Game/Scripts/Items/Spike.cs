@@ -13,6 +13,9 @@ public class spike : MonoBehaviour
     /// <param name="other">The Collision2D data associated with this collision.</param>
     void OnCollisionEnter2D(Collision2D other)
     {
-        Destroy(gameObject);
+        if(other.gameObject.layer == 7 || other.gameObject.layer == 8 || other.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
     }
 }

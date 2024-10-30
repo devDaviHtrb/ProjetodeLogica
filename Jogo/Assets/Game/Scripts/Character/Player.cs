@@ -102,15 +102,13 @@ public class Player : MonoBehaviour
             Dano();
             Controller.Instancia.vida +=1;
         }
-        if(col.gameObject.layer == 9 ){
+        if(col.gameObject.layer == 9 || col.gameObject.tag  == "Espinho"){
             Dano();
             Controller.Instancia.vida -=1;
             if(Controller.Instancia.points != 0){
             Controller.Instancia.points -= 5;
             Controller.Instancia.UpdateScoreText();
-            }
-            
-           
+            }           
         }
        
 

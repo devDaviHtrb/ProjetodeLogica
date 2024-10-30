@@ -24,8 +24,35 @@ public class spawnspike : MonoBehaviour
     }
 
     private void spawnEspinho(){
-        GameObject newSpike = Instantiate(espinho, transform.position, Quaternion.identity);
-        moverEspinho(newSpike);
+        if (direita)
+        {
+            GameObject newSpike = Instantiate(espinho, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, 0), Quaternion.identity);
+            moverEspinho(newSpike);  
+        }
+        else
+        {
+            if (esquerda)
+            {
+                GameObject newSpike = Instantiate(espinho, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, 0), Quaternion.identity);
+                moverEspinho(newSpike);
+            }
+            else
+            {
+                if (cima)
+                {
+                    GameObject newSpike = Instantiate(espinho, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, 0), Quaternion.identity);
+                    moverEspinho(newSpike);
+                }
+                else
+                {
+                    if (baixo)
+                    {
+                        GameObject newSpike = Instantiate(espinho, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, 0), Quaternion.identity);
+                        moverEspinho(newSpike);
+                    }
+                }
+            }
+        }
         StartCoroutine(Wait(5));
     }
     public void moverEspinho(GameObject spike){

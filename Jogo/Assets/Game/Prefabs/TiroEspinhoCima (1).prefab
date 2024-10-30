@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8635465788968247547}
   m_Layer: 0
   m_Name: TiroEspinhoCima (1)
-  m_TagString: Untagged
+  m_TagString: Espinho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,7 +157,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 0.1, y: 0.3}
   m_EdgeRadius: 0
 --- !u!114 &8635465788968247547
 MonoBehaviour:
