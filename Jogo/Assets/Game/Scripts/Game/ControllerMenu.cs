@@ -15,4 +15,7 @@ public class ControllerMenu : MonoBehaviour
     public void Iniciar(string fase){
         SceneManager.LoadScene(fase);
     }
+    public void sair(){
+        Application.Quit();
+    }
 }
