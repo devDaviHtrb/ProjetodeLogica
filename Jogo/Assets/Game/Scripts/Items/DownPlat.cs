@@ -21,7 +21,7 @@ public class DownPlat : MonoBehaviour
         StartCoroutine(Cair());
     }
     IEnumerator Cair(){
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         gameObject.AddComponent<Rigidbody2D>();
         Destroy(gameObject.GetComponent<TilemapCollider2D>());
         yield return new WaitForSeconds(2);
