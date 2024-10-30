@@ -87,7 +87,12 @@ public class Player : MonoBehaviour
          }
     }
     void OnCollisionEnter2D(Collision2D col)
-    {
+    {       
+        if(col.gameObject.tag == "Coletavel"){
+            Controller.Instancia.points+=10;
+            Controller.Instancia.UpdateScoreText();
+            Destroy(col.gameObject);
+        }
         if(col.gameObject.layer == 8){
             podepular = true;
             doublejump= true;

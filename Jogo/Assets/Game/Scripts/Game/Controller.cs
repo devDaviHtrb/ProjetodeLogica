@@ -26,6 +26,7 @@ public class Controller : MonoBehaviour
             GameOver.SetActive(true);
             Destroy(Player);
         }
+
     }
     public void UpdateScoreText(){
         scoreText.text = points.ToString();

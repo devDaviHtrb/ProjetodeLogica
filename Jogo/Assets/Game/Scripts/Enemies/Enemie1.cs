@@ -31,7 +31,7 @@ public class Enemie1 : MonoBehaviour
                 else
                 {
                     if(gameObject.tag == "Cobol"){
-                        vida = 1;
+                        vida = 2;
                     }
                 }
             }
@@ -50,10 +50,11 @@ public class Enemie1 : MonoBehaviour
             transform.Translate(Vector2.right*-1*Time.deltaTime);
             
         }
-        if(vida == 0){
+        if(vida == 1){
             
             if(gameObject.tag == "Cobol"){
                 Controller.Instancia.Cobol = false;
+                Debug.Log("Morto");
             }
             Destroy(gameObject);
         }  

@@ -18,7 +18,7 @@ public class Coletavel : MonoBehaviour
     }
    void OnTriggerEnter2D(Collider2D other)
     {
-            if(coletado == false){
+            if(coletado == false && other.tag == "Player"){
                 Debug.Log("Foi coletado");
                 Destroy(gameObject);
         }
