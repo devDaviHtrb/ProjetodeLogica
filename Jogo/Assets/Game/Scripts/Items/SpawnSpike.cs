@@ -26,14 +26,14 @@ public class spawnspike : MonoBehaviour
     private void spawnEspinho(){
         if (direita)
         {
-            GameObject newSpike = Instantiate(espinho, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, 0), Quaternion.identity);
+            GameObject newSpike = Instantiate(espinho, new Vector3(gameObject.transform.position.x+1, gameObject.transform.position.y, 0), Quaternion.identity);
             moverEspinho(newSpike);  
         }
         else
         {
             if (esquerda)
             {
-                GameObject newSpike = Instantiate(espinho, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, 0), Quaternion.identity);
+                GameObject newSpike = Instantiate(espinho, new Vector3(gameObject.transform.position.x-1, gameObject.transform.position.y, 0), Quaternion.identity);
                 moverEspinho(newSpike);
             }
             else
@@ -47,7 +47,7 @@ public class spawnspike : MonoBehaviour
                 {
                     if (baixo)
                     {
-                        GameObject newSpike = Instantiate(espinho, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1, 0), Quaternion.identity);
+                        GameObject newSpike = Instantiate(espinho, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 1, 0), Quaternion.identity);
                         moverEspinho(newSpike);
                     }
                 }
