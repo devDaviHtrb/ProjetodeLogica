@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class CobolDeath : MonoBehaviour
 {
-
     public int cont = 0;
-    void Start()
-    {
-
-    }
-
+    public GameObject Rubys;
     void Update()
     {
         if(Controller.Instancia.Cobol == false && cont <1){
             cont++;
+            Rubys.SetActive(true);
             AudioSource Audio = GetComponent<AudioSource>();
             Audio.Play();
         }

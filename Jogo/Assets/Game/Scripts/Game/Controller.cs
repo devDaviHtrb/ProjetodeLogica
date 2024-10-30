@@ -1,12 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
 public class Controller : MonoBehaviour
 {
-    // Start is called before the first frame update
     public static Controller Instancia;
     public int points;
     public int vida;
@@ -22,10 +18,7 @@ public class Controller : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "Fase1" ||SceneManager.GetActiveScene().name == "Fase2"||SceneManager.GetActiveScene().name == "Menu"||SceneManager.GetActiveScene().name == "MathFase"){
             PlayerPrefs.SetInt("Arma", 0);
         }
-
     }
-
-    // Update is called once per frame
     void Update()
     {
         alterInfo(vida, points);
@@ -33,7 +26,6 @@ public class Controller : MonoBehaviour
             GameOver.SetActive(true);
             Destroy(Player);
         }
-
     }
     public void UpdateScoreText(){
         scoreText.text = points.ToString();
@@ -49,7 +41,6 @@ public class Controller : MonoBehaviour
         SceneManager.LoadScene("Fase1");
     }
     public void MudarFase(string fase){
-
         SceneManager.LoadScene(fase);
     }
 }
