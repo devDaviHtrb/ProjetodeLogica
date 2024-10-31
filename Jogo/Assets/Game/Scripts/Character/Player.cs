@@ -23,6 +23,9 @@ public class Player : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         Audio =  GetComponent<AudioSource>();
+        if(PlayerPrefs.GetInt("Arma")!=0){
+            anim.SetBool("Shot", false);
+        }
 
     }
     // Update is called once per frame
@@ -35,7 +38,10 @@ public class Player : MonoBehaviour
         if(PlayerPrefs.GetInt("Arma")==1){
             anim.SetBool("TemArma", true);
         }
-        Arma();
+        if(PlayerPrefs.GetInt("Arma")!=0){
+            Arma();
+        }
+
     }
     void move(){
         Vector3 movement =  new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
