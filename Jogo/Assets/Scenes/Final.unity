@@ -51559,6 +51559,10 @@ PrefabInstance:
       propertyPath: jogador
       value: 
       objectReference: {fileID: 861318653}
+    - target: {fileID: 5941252229561177458, guid: ec9e1325cfc952c4884d72d6ad415f4f, type: 3}
+      propertyPath: Vprojetil
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8505605742005855886, guid: ec9e1325cfc952c4884d72d6ad415f4f, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
