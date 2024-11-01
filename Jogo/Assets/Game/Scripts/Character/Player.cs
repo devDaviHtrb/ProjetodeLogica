@@ -113,7 +113,6 @@ public class Player : MonoBehaviour
             Dano();
             Controller.Instancia.vida -=1;
             if(Controller.Instancia.points != 0){
-            Controller.Instancia.points -= 5;
             Controller.Instancia.UpdateScoreText();
             }           
         }
