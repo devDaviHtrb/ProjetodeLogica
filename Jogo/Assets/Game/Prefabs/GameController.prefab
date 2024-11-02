@@ -46,10 +46,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 0
-  vida: 0
+  vida: 3
   scoreText: {fileID: 0}
   GameOver: {fileID: 0}
   Player: {fileID: 0}
+  Cobol: 1
+  temp: 0
+  tempoTexto: {fileID: 0}
 --- !u!82 &3689392775769402747
 AudioSource:
   m_ObjectHideFlags: 0
