@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {  
 
-    private float speed = 0.1f;
+    private float speed = 7f;
     public float jumpF = 14f;
     private bool podepular;
     private bool doublejump;
@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
     }
     void move(){
         Vector3 movement =  new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
-        transform.position += movement *speed;
+        transform.position += movement *speed * Time.deltaTime;
         if(Input.GetAxis("Horizontal")> 0){
             transform.eulerAngles = new Vector3(0f,0f,0f);
             anim.SetBool("Walk", true);
