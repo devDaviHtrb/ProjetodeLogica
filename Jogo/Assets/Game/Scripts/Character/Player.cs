@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {  
 
-    private float speed = 0.1f/0.01f;
+    private float speed = 7f;
     public float jumpF = 14f;
     private bool podepular;
     private bool doublejump;
