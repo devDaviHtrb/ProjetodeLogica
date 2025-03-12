@@ -9,11 +9,8 @@ public class rubyFinal : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(10f, 60f), Random.Range(10f, 40f)),ForceMode2D.Force);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
         void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.layer == 8){

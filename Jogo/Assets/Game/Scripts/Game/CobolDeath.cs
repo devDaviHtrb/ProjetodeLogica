@@ -8,10 +8,6 @@ public class CobolDeath : MonoBehaviour
     public GameObject caamera;
     public GameObject MusicadeFundo;
 
-    void Start()
-    {
-       
-    }
     void Update()
     {
         if(Controller.Instancia.Cobol == false){
