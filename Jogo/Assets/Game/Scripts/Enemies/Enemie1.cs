@@ -27,7 +27,7 @@ public class Enemie1 : MonoBehaviour
                 else
                 {
                     if(gameObject.tag == "Cobol"){
-                        vida = 25;
+                        vida = 5;
                     }
                 }
             }

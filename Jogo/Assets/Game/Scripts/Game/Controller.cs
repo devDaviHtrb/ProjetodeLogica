@@ -34,6 +34,24 @@ public class Controller : MonoBehaviour
             GameOver.SetActive(true);
             Destroy(Player);
         }
+        if(Input.GetKeyDown(KeyCode.Z)){
+            MudarFase("Fase1");
+        }
+        if(Input.GetKeyDown(KeyCode.X)){
+            MudarFase("Fase2");
+        }
+        if(Input.GetKeyDown(KeyCode.C)){
+           MudarFase("Fase3");
+            PlayerPrefs.SetInt("Arma", 1);
+        }
+        if(Input.GetKeyDown(KeyCode.V)){
+            MudarFase("Fase4");
+            PlayerPrefs.SetInt("Arma", 1);
+        }
+        if(Input.GetKeyDown(KeyCode.B)){
+            MudarFase("Final");
+            PlayerPrefs.SetInt("Arma", 1);
+        }
         
     }
     
@@ -65,3 +83,5 @@ public class Controller : MonoBehaviour
         StartCoroutine(tempo());
       }
 }
+
+
