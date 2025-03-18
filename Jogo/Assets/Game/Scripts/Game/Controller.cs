@@ -19,8 +19,11 @@ public class Controller : MonoBehaviour
         Instancia = this;
         vida = PlayerPrefs.GetInt("vida");
         points = PlayerPrefs.GetInt("points");
-        if(SceneManager.GetActiveScene().name == "Fase1" ||SceneManager.GetActiveScene().name == "Fase2"||SceneManager.GetActiveScene().name == "Menu"||SceneManager.GetActiveScene().name == "MathFase"){
+
+        if(SceneManager.GetActiveScene().name == "Fase2"||SceneManager.GetActiveScene().name == "Menu"||SceneManager.GetActiveScene().name == "MathFase"){
             PlayerPrefs.SetInt("Arma", 0);
+        }else{
+            PlayerPrefs.SetInt("Arma", 1);
         }
           if(SceneManager.GetActiveScene().name == "Fase1"){
             PlayerPrefs.SetInt("Tempo", 0);
@@ -29,6 +32,9 @@ public class Controller : MonoBehaviour
     }
     void Update()
     {
+        if(SceneManager.GetActiveScene().name == "Fase1"){
+             PlayerPrefs.SetInt("Arma", 0);
+         }
         alterInfo(vida, points);
         if(vida <=0){
             GameOver.SetActive(true);
@@ -42,15 +48,15 @@ public class Controller : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.C)){
            MudarFase("Fase3");
-            PlayerPrefs.SetInt("Arma", 1);
+            
         }
         if(Input.GetKeyDown(KeyCode.V)){
             MudarFase("Fase4");
-            PlayerPrefs.SetInt("Arma", 1);
+            
         }
         if(Input.GetKeyDown(KeyCode.B)){
             MudarFase("Final");
-            PlayerPrefs.SetInt("Arma", 1);
+           
         }
         
     }
