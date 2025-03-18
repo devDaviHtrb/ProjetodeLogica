@@ -23,9 +23,10 @@ public class Player : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         Audio =  GetComponent<AudioSource>();
-        if(PlayerPrefs.GetInt("Arma")!=0){
+        if(PlayerPrefs.GetInt("Arma")==0){
             anim.SetBool("Shot", false);
         }
+        PlayerPrefs.SetInt("Arma", 1);
 
     }
     // Update is called once per frame
